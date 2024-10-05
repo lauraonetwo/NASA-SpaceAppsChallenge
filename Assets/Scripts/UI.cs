@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     [SerializeField] private float timeToWait = 2.0f;
     bool startTimer = false;
     bool show = false;
+    int value = 0;
 
     public List<GameObject> details = new List<GameObject>();
 
@@ -35,7 +36,7 @@ public class UI : MonoBehaviour
 
         if (show)
         {
-            Debug.Log("Details");
+            details[value].SetActive(true);
         }
     }
 
@@ -51,7 +52,7 @@ public class UI : MonoBehaviour
     public void ShowDetails(int v)
     {
         startTimer = true;
-        details[v].SetActive(true);
+        value = v;
     }
 
     public void ResetTimer(int v)
@@ -59,7 +60,7 @@ public class UI : MonoBehaviour
         startTimer = false;
         counter = 0;
         show = false;
-        details[v].SetActive(false);
+        details[value].SetActive(false);
     }
 
     public void Dragging(int v)
