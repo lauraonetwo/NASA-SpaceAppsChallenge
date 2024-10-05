@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class UI : MonoBehaviour
 {
     public List<Button> buttons = new List<Button>();
+    public List<GameObject> toSpawn = new List<GameObject>();
     bool clicked = false;
     float counter = 0;
     [SerializeField] private float timeToWait = 2.0f;
@@ -66,5 +67,6 @@ public class UI : MonoBehaviour
     public void Dragging(int v)
     {
         Debug.Log("Dragging");
+        Instantiate(toSpawn[v]);
     }
 }
