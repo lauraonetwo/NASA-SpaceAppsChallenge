@@ -1,16 +1,16 @@
+using System.Globalization;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class DragNDrop : MonoBehaviour
 {
     public bool isDragging = false;           
-    private Camera mainCamera;                 
     private GameObject objectToDrag;           
-    private Collider2D objectCollider;         
-
-    void Start()
-    {
-        mainCamera = Camera.main;
-    }
+    private Collider2D objectCollider;
+    GameObject budgetObject;
+    TextMeshProUGUI text;
+    bool paid = false;
 
     void Update()
     {
@@ -46,6 +46,16 @@ public class DragNDrop : MonoBehaviour
                 objectToDrag = hitCollider.gameObject;
                 objectCollider = objectToDrag.GetComponent<Collider2D>();
                 isDragging = true;
+                if (!paid)
+                {
+                    budgetObject = GameObject.Find("Budget");
+                    text = budgetObject.GetComponent<TextMeshProUGUI>();
+                    string numericString = new string(text.text.Where(char.IsDigit).ToArray());
+                    ulong currentBudget = ulong.Parse(numericString, NumberStyles.AllowThousands);
+                    currentBudget -= GetComponent<Info>().price;
+                    text.text = "Budget: $" + currentBudget.ToString("N0");
+                    paid = true;
+                }
                 break;
             }
         }

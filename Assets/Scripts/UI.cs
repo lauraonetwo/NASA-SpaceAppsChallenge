@@ -14,7 +14,6 @@ public class UI : MonoBehaviour
     bool startTimer = false;
     bool show = false;
     int value = 0;
-    GameObject instantiatedObject = null;
 
     public List<GameObject> details = new List<GameObject>();
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5110495848296184964}
   - component: {fileID: 3968933332749931040}
   - component: {fileID: 899609913100313250}
+  - component: {fileID: 6090334909802577852}
   m_Layer: 0
   m_Name: House
   m_TagString: Object
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533027ea6e2c21140b417c6b9d1ae0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
 --- !u!60 &899609913100313250
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +151,16 @@ PolygonCollider2D:
       - {x: 0.5137353, y: 0.26810217}
       - {x: 0.009532452, y: 0.50457835}
   m_UseDelaunayMesh: 0
+--- !u!114 &6090334909802577852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5748890586580851872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1121cd26801d08468af31ee995cde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 350000

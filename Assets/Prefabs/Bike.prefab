@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 135942563725590700}
   - component: {fileID: 2571437450599168763}
   - component: {fileID: 8513701204998085293}
+  - component: {fileID: 3116136341671727563}
   m_Layer: 0
   m_Name: Bike
   m_TagString: Object
@@ -150,3 +151,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533027ea6e2c21140b417c6b9d1ae0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
+--- !u!114 &3116136341671727563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5205418129643020522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1121cd26801d08468af31ee995cde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 100000

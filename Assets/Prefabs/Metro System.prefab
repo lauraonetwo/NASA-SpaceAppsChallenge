@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4219658867795973950}
   - component: {fileID: 3560311806461745929}
   - component: {fileID: 4787118042160700075}
+  - component: {fileID: -499901834174955332}
   m_Layer: 0
   m_Name: Metro System
   m_TagString: Object
@@ -150,3 +151,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533027ea6e2c21140b417c6b9d1ae0c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 0
+--- !u!114 &-499901834174955332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4173741781210033723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1121cd26801d08468af31ee995cde25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 300000000
