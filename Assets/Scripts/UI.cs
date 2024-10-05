@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class UI : MonoBehaviour
 {
+    private Camera mainCamera;
     public List<Button> buttons = new List<Button>();
     public List<GameObject> toSpawn = new List<GameObject>();
     bool clicked = false;
@@ -12,6 +14,7 @@ public class UI : MonoBehaviour
     bool startTimer = false;
     bool show = false;
     int value = 0;
+    GameObject instantiatedObject = null;
 
     public List<GameObject> details = new List<GameObject>();
 
@@ -22,6 +25,7 @@ public class UI : MonoBehaviour
             button.gameObject.SetActive(false);
         }
         clicked = false;
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -62,11 +66,5 @@ public class UI : MonoBehaviour
         counter = 0;
         show = false;
         details[value].SetActive(false);
-    }
-
-    public void Dragging(int v)
-    {
-        Debug.Log("Dragging");
-        Instantiate(toSpawn[v]);
     }
 }
