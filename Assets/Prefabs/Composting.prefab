@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2222210067382495300}
   - component: {fileID: 982869199531884970}
   - component: {fileID: -6306720495517595495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Composting
   m_TagString: Object
   m_Icon: {fileID: 0}

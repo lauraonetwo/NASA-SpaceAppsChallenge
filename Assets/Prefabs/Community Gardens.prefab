@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 396246811604102117}
   - component: {fileID: 5396340589797884867}
   - component: {fileID: 993360477019651891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Community Gardens
   m_TagString: Object
   m_Icon: {fileID: 0}

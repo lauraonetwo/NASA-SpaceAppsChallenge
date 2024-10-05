@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2917464528403836105}
   - component: {fileID: 9188753577509883113}
   - component: {fileID: -2708267401863589855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Energy Efficient Building
   m_TagString: Object
   m_Icon: {fileID: 0}

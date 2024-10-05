@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6718594193974372748}
   - component: {fileID: 3260250793573228419}
   - component: {fileID: 3781889227361981433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Solar Farms
   m_TagString: Object
   m_Icon: {fileID: 0}

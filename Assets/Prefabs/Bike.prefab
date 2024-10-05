@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2571437450599168763}
   - component: {fileID: 8513701204998085293}
   - component: {fileID: 3116136341671727563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bike
   m_TagString: Object
   m_Icon: {fileID: 0}

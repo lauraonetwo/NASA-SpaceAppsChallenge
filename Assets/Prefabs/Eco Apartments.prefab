@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6595873750701494203}
   - component: {fileID: 6276306724288666681}
   - component: {fileID: -731363513931240494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eco Apartments
   m_TagString: Object
   m_Icon: {fileID: 0}

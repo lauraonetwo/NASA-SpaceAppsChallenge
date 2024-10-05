@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4165788477899245975}
   - component: {fileID: 9060316034894106928}
   - component: {fileID: -3258666498089235379}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wind Turbine
   m_TagString: Object
   m_Icon: {fileID: 0}

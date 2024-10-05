@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8843744312396292405}
   - component: {fileID: 746726764730174914}
   - component: {fileID: -2039336993937481053}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Coliving
   m_TagString: Object
   m_Icon: {fileID: 0}

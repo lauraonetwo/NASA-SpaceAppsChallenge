@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3674464184703632916}
   - component: {fileID: 8217697274335737841}
   - component: {fileID: 4966004450949346295}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Recycling Centers
   m_TagString: Object
   m_Icon: {fileID: 0}

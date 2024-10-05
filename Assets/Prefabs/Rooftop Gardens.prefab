@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7158099970941505037}
   - component: {fileID: 7210161512651850284}
   - component: {fileID: 601492492238480535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rooftop Gardens
   m_TagString: Object
   m_Icon: {fileID: 0}
