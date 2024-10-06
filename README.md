@@ -31,6 +31,8 @@ Through seven rounds of decision-making, students will allocate resources, devel
 
 With scalability in mind, Challenge Earth can be adapted to focus on other SDGs by modifying the in-game assets. This makes the tool not only relevant for the current topic but expandable for future education around global sustainability challenges.
 
+We hope this tool will become a valuable part of classrooms worldwide, fostering the next generation of responsible, informed citizens.
+
 ---
 
-Thank you for your interest in **Challenge Earth**! We hope this tool will become a valuable part of classrooms worldwide, fostering the next generation of responsible, informed citizens.
+Made with love ❤️ by university students: Laura, Lubin, Carolina, Lucía and Susana.
