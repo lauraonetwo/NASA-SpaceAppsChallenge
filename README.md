@@ -20,7 +20,7 @@ This repository contains the following components to help educators and develope
 
 - **[Lesson Plan](/docs/Lesson%20plan.pdf):** A structured guide for teachers to use the simulation in a classroom setting, including reflection exercises and discussion points.
 - **[Teacher's Guide](/docs/Teacher's%20Guide.pdf):** Detailed instructions on how to facilitate the game and guide students through understanding the consequences of their decisions.
-- **[Assets Data](/docs/Asset's%20data.pdf):** Information on the different assets (public transport, housing, green spaces, etc.) used in the simulation and their real-world implications.
+- **[Assets Data](/docs/Assets%20data.pdf):** Information on the different assets (public transport, housing, green spaces, etc.) used in the simulation and their real-world implications.
 - **Simulation Code:** The core code that runs the simulation, allowing for modification and expansion. See this repository. Try it with Unity version 2022.3.47f
 - **[Data Model](/docs/EPI_prediction.ipynb):** The sustainability index model based on NASA’s Environmental Performance Index (EPI) to calculate the effects of player decisions.
 
