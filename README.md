@@ -18,11 +18,11 @@ Throughout this project, we’ve gained deeper insights into how to simplify com
 ## Repository Contents 📂
 This repository contains the following components to help educators and developers use, modify, and expand the simulation:
 
-- **Lesson Plan:** A structured guide for teachers to use the simulation in a classroom setting, including reflection exercises and discussion points.
-- **Teacher's Guide:** Detailed instructions on how to facilitate the game and guide students through understanding the consequences of their decisions.
-- **Assets Data:** Information on the different assets (public transport, housing, green spaces, etc.) used in the simulation and their real-world implications.
-- **Simulation Code:** The core code that runs the simulation, allowing for modification and expansion.
-- **Data Model:** The sustainability index model based on NASA’s Environmental Performance Index (EPI) to calculate the effects of player decisions.
+- **[Lesson Plan](/docs/Lesson%20plan.pdf):** A structured guide for teachers to use the simulation in a classroom setting, including reflection exercises and discussion points.
+- **[Teacher's Guide](/docs/Teacher's%20Guide.pdf):** Detailed instructions on how to facilitate the game and guide students through understanding the consequences of their decisions.
+- **[Assets Data](/docs/Assets'%20data.pdf):** Information on the different assets (public transport, housing, green spaces, etc.) used in the simulation and their real-world implications.
+- **Simulation Code:** The core code that runs the simulation, allowing for modification and expansion. See this repository. Try it with Unity version 2022.3.47f
+- **[Data Model](/docs/EPI_prediction.ipynb):** The sustainability index model based on NASA’s Environmental Performance Index (EPI) to calculate the effects of player decisions.
 
 ## Pitch Overview 🎙
 Challenge Earth is more than just a game—it's a learning tool designed to foster critical thinking about sustainability. Students today face abstract discussions about sustainability, but with Challenge Earth, they can directly see the impact of their choices. 
