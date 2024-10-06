@@ -46,6 +46,13 @@ public class DragNDrop : MonoBehaviour
                 objectToDrag = hitCollider.gameObject;
                 objectCollider = objectToDrag.GetComponent<Collider2D>();
                 isDragging = true;
+                Info info = objectToDrag.GetComponent<Info>();
+                GameObject empty = info.assignedEmpty;
+                if (info.assignedEmpty != null)
+                {
+                    empty.GetComponent<Available>().isAvailable = true;
+                }
+                info.assignedEmpty = null;
                 if (!paid)
                 {
                     budgetObject = GameObject.Find("Budget");
@@ -78,9 +85,11 @@ public class DragNDrop : MonoBehaviour
 
         foreach (Collider2D hitCollider in hitColliders)
         {
-            if (hitCollider != null && hitCollider is PolygonCollider2D && hitCollider.tag.Equals("Empty"))
+            if (hitCollider != null && hitCollider is PolygonCollider2D && hitCollider.tag.Equals("Empty") && hitCollider.GetComponent<Available>().isAvailable)
             {
                 objectToDrag.transform.position = hitCollider.transform.position;
+                objectToDrag.GetComponent<Info>().assignedEmpty = hitCollider.gameObject;
+                hitCollider.GetComponent<Available>().isAvailable = false;
                 break;
             }
         }
