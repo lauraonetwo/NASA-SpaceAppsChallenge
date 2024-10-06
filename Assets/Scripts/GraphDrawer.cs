@@ -17,6 +17,9 @@ public class GraphDrawer : MonoBehaviour
     public Vector2 legendPosition = new Vector2(10f, 50f);
     public int legendFontSize = 14;
 
+    private float animationProgress = 0f;
+    public float animationSpeed = 1f;
+
     private void Start()
     {
         linesData.Add(new List<float> { 10, 20, 30, 40, 50 });
@@ -30,6 +33,12 @@ public class GraphDrawer : MonoBehaviour
         lineColors.Add(Color.green);
         lineColors.Add(Color.red);
         lineColors.Add(Color.cyan);
+    }
+
+    private void Update()
+    {
+        animationProgress += Time.deltaTime * animationSpeed;
+        animationProgress = Mathf.Clamp(animationProgress, 0f, xAxisLabels.Count - 1);
     }
 
     private void OnGUI()
@@ -55,23 +64,31 @@ public class GraphDrawer : MonoBehaviour
         {
             List<float> lineData = linesData[lineIndex];
 
-            for (int i = 0; i < lineData.Count - 1; i++)
+            int numPointsToDraw = Mathf.FloorToInt(animationProgress);
+
+            for (int i = 0; i < numPointsToDraw; i++)
             {
-                float normalizedValue1 = lineData[i] / maxValue;
-                float normalizedValue2 = lineData[i + 1] / maxValue;
-                float x1 = startX + (i * (graphWidth / (lineData.Count - 1)));
-                float y1 = startY + graphHeight - (normalizedValue1 * graphHeight);
-                float x2 = startX + ((i + 1) * (graphWidth / (lineData.Count - 1)));
-                float y2 = startY + graphHeight - (normalizedValue2 * graphHeight);
+                if (i < lineData.Count - 1)
+                {
+                    float normalizedValue1 = lineData[i] / maxValue;
+                    float normalizedValue2 = lineData[i + 1] / maxValue;
+                    float x1 = startX + (i * (graphWidth / (lineData.Count - 1)));
+                    float y1 = startY + graphHeight - (normalizedValue1 * graphHeight);
+                    float x2 = startX + ((i + 1) * (graphWidth / (lineData.Count - 1)));
+                    float y2 = startY + graphHeight - (normalizedValue2 * graphHeight);
 
-                Drawing.DrawLine(new Vector2(x1, y1), new Vector2(x2, y2), lineColors[lineIndex], lineThickness);
+                    Drawing.DrawLine(new Vector2(x1, y1), new Vector2(x2, y2), lineColors[lineIndex], lineThickness);
 
-                Drawing.DrawCircle(new Vector2(x1, y1), pointSize, lineColors[lineIndex]);
+                    Drawing.DrawCircle(new Vector2(x1, y1), pointSize, lineColors[lineIndex]);
+                }
             }
 
-            float lastX = startX + ((lineData.Count - 1) * (graphWidth / (lineData.Count - 1)));
-            float lastY = startY + graphHeight - (lineData[lineData.Count - 1] / maxValue * graphHeight);
-            Drawing.DrawCircle(new Vector2(lastX, lastY), pointSize, lineColors[lineIndex]);
+            if (numPointsToDraw < lineData.Count)
+            {
+                float x = startX + (numPointsToDraw * (graphWidth / (lineData.Count - 1)));
+                float y = startY + graphHeight - (lineData[numPointsToDraw] / maxValue * graphHeight);
+                Drawing.DrawCircle(new Vector2(x, y), pointSize, lineColors[lineIndex]);
+            }
         }
 
         for (int i = 0; i < xAxisLabels.Count; i++)

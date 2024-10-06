@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public List<GameObject> objects = new List<GameObject>();
-
-    private GameObject budgetObj;
+    private GameObject budgetObject;
     private ulong demolishPrice = 0;
 
     private void Awake()
@@ -23,8 +22,6 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-        budgetObj = GameObject.Find("Budget");
     }
 
     public void Demolish()
@@ -41,10 +38,12 @@ public class GameManager : MonoBehaviour
         }
         objects.Clear();
 
-        TextMeshProUGUI text = budgetObj.GetComponent<TextMeshProUGUI>();
+        budgetObject = GameObject.Find("Budget");
+        TextMeshProUGUI text = budgetObject.GetComponent<TextMeshProUGUI>();
         string numericString = new string(text.text.Where(char.IsDigit).ToArray());
         ulong.TryParse(numericString, out ulong budget);
         budget -= demolishPrice;
         text.text = "Budget: $" + budget.ToString("N0");
+        demolishPrice = 0;
     }
 }
