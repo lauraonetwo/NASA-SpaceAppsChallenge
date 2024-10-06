@@ -19,7 +19,7 @@ public class ButtonBeginDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(screenPosition);
         instantiatedObject = Instantiate(prefab, worldPosition, Quaternion.identity);
         instantiatedObject.GetComponent<DragNDrop>().TryPickObject();
-        GameManager.Instance.objects.Add(instantiatedObject);
+        GameManager.objects.Add(instantiatedObject);
 
         if (EventSystem.current != null && instantiatedObject != null)
         {

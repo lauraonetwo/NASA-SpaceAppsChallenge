@@ -4,24 +4,28 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public string loadedScene;
-    public void ChangeToScene(string sceneName)
+    public static void ChangeToScene(string sceneName)
     {
         Debug.Log("Changing scene");
         SceneManager.LoadScene(sceneName);
+
+        if (sceneName == "Menu")
+        {
+            GameManager.Demolish();
+        }
     }
 
-    public void QuitGame()
+    public static void QuitGame()
     {
         Debug.Log("Quitting game");
         Application.Quit();
     }
 
-    public void LoadAdditionalScene(string sceneName)
+    public static void LoadAdditionalScene(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
         {
             SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-            loadedScene = sceneName;
         }
         else
         {
@@ -29,11 +33,11 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    public void UnloadLoadedScene()
+    public static void UnloadLoadedScene(string sceneName)
     {
-        if (!string.IsNullOrEmpty(loadedScene))
+        if (!string.IsNullOrEmpty(sceneName))
         {
-            SceneManager.UnloadScene(loadedScene);
+            SceneManager.UnloadScene(sceneName);
         }
         else
         {

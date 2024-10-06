@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public List<GameObject> objects = new List<GameObject>();
-    private GameObject budgetObject;
-    private ulong demolishPrice = 0;
+    public static List<GameObject> objects = new List<GameObject>();
+    private static GameObject budgetObject;
+    private static ulong demolishPrice = 0;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Demolish()
+    public static void Demolish()
     {
         foreach (GameObject obj in objects)
         {
